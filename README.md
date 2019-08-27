@@ -34,7 +34,7 @@ As a summary, the applicaiton preview different sports categories each with a gr
 ## Server Configurations
 #### Updating Packages
 1. Use the command `sudo apt-get update`  to detect the updates for the current packages.
-2. Use the command `sudo apt-get upgrade` to apply the updates.
+2. Use the command `sudo apt-get dist-upgrade` to apply the updates.
 #### Firwall configurations
 1. Close all incoming requestes `sudo ufw default deny incoming`
 2. Enable all outgoing requests `sudo ufw default allow outgoing`
@@ -46,7 +46,11 @@ As a summary, the applicaiton preview different sports categories each with a gr
 4. Activate the firewall `sudo ufw enable`
 
 #### User Management
-1. Adding user "**grader**" `sudo adduser grader`
+1. Prevent root user login by changing the value of "**PermitRootLogin**" to "**no**" in "sshd_config" file.
+Steps:
+    - `sudo nano /etc/ssh/sshd_config`
+    - search for "**#PermitRootLogin prohibit-password**" and change it to be "**PermitRootLogin no**"
+2. Adding user "**grader**" `sudo adduser grader`
 2. Adding user **grader** to the sudo list `sudo adduser grader sudo`
 
 #### Time Zone Configuration
@@ -70,7 +74,7 @@ By default, remote connections are disabled to postgreSQL
   * Create **.htaccess** at the root of the server using this command `sudo touch .htaccess`.
   * Edit this file using the command `sudo nano .htaccess` and add the text "RedirectMatch 404 /\\.git".
   * Save and Exit.
-5. To run the application in the background, cd in the folder Item Catalog and run the application using the command `nohup python3 application.py &`
+5. To run the application in the background, cd in the folder Item Catalog and run the application using the command `sudo nohup python3 application.py &`
 6. Now you can browse the application http://3.123.57.98.xip.io:8000/.
 
 #### Third Parties Source Lists
@@ -81,8 +85,6 @@ By default, remote connections are disabled to postgreSQL
 I created an SSH key locally using the service keygen".
 The private key location is "**/home/vagrant/.ssh/linuxCourse**".
 Then I created the specified file on my server to store the public key to enable ssh key authentication.
-* All the following commands should be created by the grader user, so either login with the grader user or run commands in behalf of grader user and this can be done as follows.
-* First, Create "**authorized_keys**" file in "**.ssh**" folder. `sudo -u grader touch .ssh/authorized_keys`.
-* Second, Edit the file. `sudo -u grader sudo nano .ssh/authorized_keys`
+* First, Create "**authorized_keys**" file in "**.ssh**" folder. `sudo touch .ssh/authorized_keys`.
+* Second, Edit the file. `sudo nano .ssh/authorized_keys`
 * Third, Add the public key to the file, save, and exit.
-
