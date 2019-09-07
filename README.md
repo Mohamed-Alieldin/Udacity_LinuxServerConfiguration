@@ -43,7 +43,6 @@ As a summary, the applicaiton preview different sports categories each with a gr
     * `sudo ufw allow ssh`
     * `sudo ufw allow www`
     * `sudo ufw allow ntp`
-    * `sudo ufw allow 8000` where 8000 is the port that the application listens on.
 4. Activate the firewall `sudo ufw enable`
 
 #### User Management
