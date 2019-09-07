@@ -26,6 +26,8 @@ SSH Port: **2200**
 ## Application Url
 
 http://3.123.57.98.xip.io
+or
+http://3.123.57.98
 
 ## Software Summary
 The software running on the server is a web application called "Item Catalog". This was the second project requested in my Udacity Full Stack Web Development Nano Degree Program.
