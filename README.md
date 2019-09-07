@@ -14,17 +14,18 @@
 - [Server Configurations](#Server-Configurations)
 - [SSH Keys Generation](#SSH-Keys-Generation)
 
+
 ## Intro
 
 This project focuses mainly on how to run and secure an ubuntu server to host a web application.
 
 ## IP&SSH
 Server IP: **3.123.57.98**
-SSH Port: **22**
+SSH Port: **2200**
 
 ## Application Url
 
-http://3.123.57.98.xip.io:8000/
+http://3.123.57.98.xip.io
 
 ## Software Summary
 The software running on the server is a web application called "Item Catalog". This was the second project requested in my Udacity Full Stack Web Development Nano Degree Program.
@@ -75,8 +76,9 @@ By default, remote connections are disabled to postgreSQL
   * Create **.htaccess** at the root of the server using this command `sudo touch .htaccess`.
   * Edit this file using the command `sudo nano .htaccess` and add the text "RedirectMatch 404 /\\.git".
   * Save and Exit.
-5. To run the application in the background, cd in the folder Item Catalog and run the application using the command `sudo nohup python3 application.py &`
-6. Now you can browse the application http://3.123.57.98.xip.io:8000/.
+5. Run the app as WSGI app
+To run the application as a wsgi app on apache, follow this [guide](http://terokarvinen.com/2016/deploy-flask-python3-on-apache2-ubuntu) 
+6. Now you can browse the application http://3.123.57.98.xip.io.
 
 #### Third Parties Source Lists
 1. I used [amazon lightsail](https://lightsail.aws.amazon.com) to get the server for hosting my application.
@@ -89,3 +91,5 @@ Then I created the specified file on my server to store the public key to enable
 * First, Create "**authorized_keys**" file in "**.ssh**" folder. `sudo touch .ssh/authorized_keys`.
 * Second, Edit the file. `sudo nano .ssh/authorized_keys`
 * Third, Add the public key to the file, save, and exit.
+
+
