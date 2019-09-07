@@ -60,9 +60,10 @@ Run `sudo dpkg-reconfigure tzdata` and then choose UTC as required in this proje
 1. Install python3 `sudo apt-get install libapache2-mod-wsgi-py3`
 2. Install Git `sudo apt install git`
 3. Install pip3 `sudo apt install python3-pip`
-3. Install PostgreSQL `apt-get install postgresql postgresql-contrib`
+4. Install SQLAlchemy `sudo pip install flask-sqlalchemy`
+5. Install PostgreSQL `apt-get install postgresql postgresql-contrib`
 By default, remote connections are disabled to postgreSQL
-4. Create Catalog database `sudo -u postgres createdb catalog`
+6. Create Catalog database `sudo -u postgres createdb catalog`
 
 #### Running The Application
 1. Clone the Item Catalog Project `git clone https://github.com/Mohamed-Alieldin/Item-Catalog.git`
