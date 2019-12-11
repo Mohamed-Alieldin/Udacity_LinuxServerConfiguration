@@ -20,14 +20,14 @@
 This project focuses mainly on how to run and secure an ubuntu server to host a web application.
 
 ## IP&SSH
-Server IP: **3.123.57.98**
+Server IP: **3.123.57.98** (Not Valid Anymore)
 SSH Port: **2200**
 
 ## Application Url
-
 http://3.123.57.98.xip.io
 or
 http://3.123.57.98
+These are the urls that was used in the project delivery. They are not valid anymore.
 
 ## Software Summary
 The software running on the server is a web application called "Item Catalog". This was the second project requested in my Udacity Full Stack Web Development Nano Degree Program.
