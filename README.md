@@ -20,13 +20,14 @@
 This project focuses mainly on how to run and secure an ubuntu server to host a web application.
 
 ## IP&SSH
-Server IP: **3.123.57.98** (Not Valid Anymore)
+Server IP: **3.123.57.98** (Not Valid Anymore) <br />
 SSH Port: **2200**
 
 ## Application Url
 http://3.123.57.98.xip.io
 or
 http://3.123.57.98
+<br />
 These are the urls that was used in the project delivery. They are not valid anymore.
 
 ## Software Summary
